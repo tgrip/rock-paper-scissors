@@ -12,7 +12,7 @@
     <artifactId>rock-paper-scissors</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rock-paper-scissors</name>
-    <description>Rock papper scissors game</description>
+    <description>Rock paper scissors game</description>
 
     <properties>
         <java.version>15</java.version>
@@ -23,10 +23,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>1.3-groovy-2.5</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
