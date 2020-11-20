@@ -26,12 +26,12 @@ public enum Shape {
     Rock {
         @Override
         GameResult playAgainstScissor() {
-            return Draw;
+            return Win;
         }
 
         @Override
         GameResult playAgainstPaper() {
-            return Draw;
+            return Loose;
         }
 
         @Override
@@ -48,12 +48,12 @@ public enum Shape {
 
         @Override
         GameResult playAgainstPaper() {
-            return Draw;
+            return Win;
         }
 
         @Override
         GameResult playAgainstRock() {
-            return Draw;
+            return Loose;
         }
     };
 

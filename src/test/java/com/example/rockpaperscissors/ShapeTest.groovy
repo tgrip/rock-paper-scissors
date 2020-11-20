@@ -3,6 +3,9 @@ package com.example.rockpaperscissors
 import spock.lang.Specification
 import spock.lang.Unroll
 
+import static com.example.rockpaperscissors.GameResult.Draw
+import static com.example.rockpaperscissors.GameResult.Loose
+import static com.example.rockpaperscissors.GameResult.Win
 import static com.example.rockpaperscissors.Shape.Paper
 import static com.example.rockpaperscissors.Shape.Rock
 import static com.example.rockpaperscissors.Shape.Scissor
@@ -22,8 +25,44 @@ class ShapeTest extends Specification {
 
         where:
         otherShape  | expectedResult
-        Paper       | GameResult.Draw
-        Rock        | GameResult.Win
-        Scissor     | GameResult.Loose
+        Paper       | Draw
+        Rock        | Win
+        Scissor     | Loose
+    }
+
+    @Unroll
+    def "When playing with Scissor against #otherShape, the result has to be #expectedResult"() {
+        given:
+        def shape = Scissor
+
+        when:
+        def gameResult = shape.playAgainst(otherShape)
+
+        then:
+        gameResult == expectedResult
+
+        where:
+        otherShape  | expectedResult
+        Paper       | Win
+        Rock        | Loose
+        Scissor     | Draw
+    }
+
+    @Unroll
+    def "When playing with Rock against #otherShape, the result has to be #expectedResult"() {
+        given:
+        def shape = Rock
+
+        when:
+        def gameResult = shape.playAgainst(otherShape)
+
+        then:
+        gameResult == expectedResult
+
+        where:
+        otherShape  | expectedResult
+        Paper       | Loose
+        Rock        | Draw
+        Scissor     | Win
     }
 }
