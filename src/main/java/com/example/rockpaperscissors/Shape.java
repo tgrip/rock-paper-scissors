@@ -4,22 +4,26 @@ import org.springframework.lang.NonNull;
 
 import static com.example.rockpaperscissors.GameResult.Draw;
 
-public enum Shape  {
+public enum Shape {
 
     Paper {
         @Override
         GameResult playAgainstPaper() {
             return Draw;
         }
-    }, Rock {
+    },
+
+    Rock {
         @Override
         GameResult playAgainstPaper() {
-            return null;
+            return Draw;
         }
-    }, Scissor {
+    },
+
+    Scissor {
         @Override
         GameResult playAgainstPaper() {
-            return null;
+            return Draw;
         }
     };
 
@@ -32,14 +36,17 @@ public enum Shape  {
         };
     }
 
+    @NonNull
     private GameResult playAgainstScissor() {
-        return null;
+        return Draw;
     }
 
+    @NonNull
     abstract GameResult playAgainstPaper();
 
+    @NonNull
     private GameResult playAgainstRock() {
-        return null;
+        return Draw;
     }
 
 }
