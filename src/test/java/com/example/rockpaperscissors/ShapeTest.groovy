@@ -9,8 +9,8 @@ import static com.example.rockpaperscissors.Shape.Scissor
 
 class ShapeTest extends Specification {
 
-
-    def "play with paper"() {
+    @Unroll
+    def "When playing with Paper against #otherShape, the result has to be #expectedResult"() {
         given:
         def shape = Paper
 
@@ -24,5 +24,6 @@ class ShapeTest extends Specification {
         otherShape  | expectedResult
         Paper       | GameResult.Draw
         Rock        | GameResult.Win
+        Scissor     | GameResult.Loose
     }
 }
