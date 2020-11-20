@@ -2,27 +2,57 @@ package com.example.rockpaperscissors;
 
 import org.springframework.lang.NonNull;
 
-import static com.example.rockpaperscissors.GameResult.Draw;
+import static com.example.rockpaperscissors.GameResult.*;
 
 public enum Shape {
 
     Paper {
         @Override
+        GameResult playAgainstScissor() {
+            return Loose;
+        }
+
+        @Override
         GameResult playAgainstPaper() {
             return Draw;
+        }
+
+        @Override
+        GameResult playAgainstRock() {
+            return Win;
         }
     },
 
     Rock {
         @Override
+        GameResult playAgainstScissor() {
+            return Draw;
+        }
+
+        @Override
         GameResult playAgainstPaper() {
+            return Draw;
+        }
+
+        @Override
+        GameResult playAgainstRock() {
             return Draw;
         }
     },
 
     Scissor {
         @Override
+        GameResult playAgainstScissor() {
+            return Draw;
+        }
+
+        @Override
         GameResult playAgainstPaper() {
+            return Draw;
+        }
+
+        @Override
+        GameResult playAgainstRock() {
             return Draw;
         }
     };
@@ -37,16 +67,12 @@ public enum Shape {
     }
 
     @NonNull
-    private GameResult playAgainstScissor() {
-        return Draw;
-    }
+    abstract GameResult playAgainstScissor();
 
     @NonNull
     abstract GameResult playAgainstPaper();
 
     @NonNull
-    private GameResult playAgainstRock() {
-        return Draw;
-    }
+    abstract GameResult playAgainstRock();
 
 }
