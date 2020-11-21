@@ -4,5 +4,5 @@ import org.springframework.lang.NonNull;
 
 public interface PlayStrategy {
     @NonNull
-    Shape playShape();
+    HandSign playHandSign();
 }

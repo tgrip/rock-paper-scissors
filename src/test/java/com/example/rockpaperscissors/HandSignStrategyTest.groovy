@@ -2,15 +2,15 @@ package com.example.rockpaperscissors
 
 import spock.lang.Specification
 
-class ShapeStrategyTest extends Specification {
+class HandSignStrategyTest extends Specification {
 
     def "shape strategy returns the same shape"() {
         given:
-        def shape = Shape.Rock
-        def shapeStrategy = new ShapeStrategy(shape)
+        def shape = HandSign.Rock
+        def shapeStrategy = new HandSignStrategy(shape)
 
         when:
-        def playedShape = shapeStrategy.playShape()
+        def playedShape = shapeStrategy.playHandSign()
 
         then:
         shape == playedShape

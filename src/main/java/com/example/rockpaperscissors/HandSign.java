@@ -4,7 +4,7 @@ import org.springframework.lang.NonNull;
 
 import static com.example.rockpaperscissors.GameResult.*;
 
-public enum Shape {
+public enum HandSign {
 
     Paper {
         @Override
@@ -58,7 +58,7 @@ public enum Shape {
     };
 
     @NonNull
-    public GameResult playAgainst(@NonNull Shape other) {
+    public GameResult playAgainst(@NonNull HandSign other) {
         return switch (other) {
             case Paper -> playAgainstPaper();
             case Rock -> playAgainstRock();

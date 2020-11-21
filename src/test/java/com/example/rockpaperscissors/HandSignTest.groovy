@@ -6,11 +6,11 @@ import spock.lang.Unroll
 import static com.example.rockpaperscissors.GameResult.Draw
 import static com.example.rockpaperscissors.GameResult.Loose
 import static com.example.rockpaperscissors.GameResult.Win
-import static com.example.rockpaperscissors.Shape.Paper
-import static com.example.rockpaperscissors.Shape.Rock
-import static com.example.rockpaperscissors.Shape.Scissor
+import static HandSign.Paper
+import static HandSign.Rock
+import static HandSign.Scissor
 
-class ShapeTest extends Specification {
+class HandSignTest extends Specification {
 
     @Unroll
     def "When playing with Paper against #otherShape, the result has to be #expectedResult"() {
