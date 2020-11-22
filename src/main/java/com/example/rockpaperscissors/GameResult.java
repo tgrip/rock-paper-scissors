@@ -1,7 +1,7 @@
 package com.example.rockpaperscissors;
 
 public enum GameResult {
-    Win("Wins"), Draw("Draws"), Loose("Loses");
+    Win("Wins"), Draw("Draws"), Loose("Losses");
 
     private final String plural;
 

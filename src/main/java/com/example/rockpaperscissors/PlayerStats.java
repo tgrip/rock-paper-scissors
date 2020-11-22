@@ -25,6 +25,10 @@ public class PlayerStats {
         return new ResultStat(gameResult, count);
     }
 
+    public void addResult(GameResult gameResult) {
+        stats.merge(gameResult, 1, Integer::sum);
+    }
+
     private static class ResultStat {
 
         private final GameResult gameResult;
