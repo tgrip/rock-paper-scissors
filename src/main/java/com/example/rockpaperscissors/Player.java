@@ -4,9 +4,9 @@ import org.springframework.lang.NonNull;
 
 public class Player {
 
-    private final PlayStrategy strategy;
+    private final PlayerStrategy strategy;
 
-    public Player(PlayStrategy strategy) {
+    public Player(PlayerStrategy strategy) {
         this.strategy = strategy;
     }
 

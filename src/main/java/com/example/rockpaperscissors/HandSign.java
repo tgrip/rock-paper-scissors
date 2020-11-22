@@ -9,7 +9,7 @@ public enum HandSign {
     Paper {
         @Override
         GameResult playAgainstScissor() {
-            return Loose;
+            return Lose;
         }
 
         @Override
@@ -31,7 +31,7 @@ public enum HandSign {
 
         @Override
         GameResult playAgainstPaper() {
-            return Loose;
+            return Lose;
         }
 
         @Override
@@ -53,7 +53,7 @@ public enum HandSign {
 
         @Override
         GameResult playAgainstRock() {
-            return Loose;
+            return Lose;
         }
     };
 

@@ -2,7 +2,7 @@ package com.example.rockpaperscissors
 
 import spock.lang.Specification
 
-import static com.example.rockpaperscissors.GameResult.Loose
+import static com.example.rockpaperscissors.GameResult.Lose
 import static com.example.rockpaperscissors.GameResult.Win
 
 class PlayerStatsTest extends Specification {
@@ -32,7 +32,7 @@ class PlayerStatsTest extends Specification {
         given:
         playerStats.addResult(Win)
         playerStats.addResult(Win)
-        playerStats.addResult(Loose)
+        playerStats.addResult(Lose)
 
         when:
         def status = playerStats.status()

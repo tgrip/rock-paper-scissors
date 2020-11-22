@@ -17,7 +17,7 @@ class PlayerTest extends Specification {
     }
 
     private Player createPlayer(HandSign signPlayed) {
-        PlayStrategy strategy = Mock()
+        PlayerStrategy strategy = Mock()
         strategy.playHandSign() >> signPlayed
         new Player(strategy)
     }

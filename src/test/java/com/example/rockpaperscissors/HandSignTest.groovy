@@ -4,7 +4,7 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 import static com.example.rockpaperscissors.GameResult.Draw
-import static com.example.rockpaperscissors.GameResult.Loose
+import static com.example.rockpaperscissors.GameResult.Lose
 import static com.example.rockpaperscissors.GameResult.Win
 import static HandSign.Paper
 import static HandSign.Rock
@@ -27,7 +27,7 @@ class HandSignTest extends Specification {
         otherShape  | expectedResult
         Paper       | Draw
         Rock        | Win
-        Scissor     | Loose
+        Scissor     | Lose
     }
 
     @Unroll
@@ -44,7 +44,7 @@ class HandSignTest extends Specification {
         where:
         otherShape  | expectedResult
         Paper       | Win
-        Rock        | Loose
+        Rock        | Lose
         Scissor     | Draw
     }
 
@@ -61,7 +61,7 @@ class HandSignTest extends Specification {
 
         where:
         otherShape  | expectedResult
-        Paper       | Loose
+        Paper       | Lose
         Rock        | Draw
         Scissor     | Win
     }

@@ -1,6 +1,6 @@
 package com.example.rockpaperscissors;
 
-public class HandSignStrategy implements PlayStrategy {
+public class HandSignStrategy implements PlayerStrategy {
 
     private final HandSign handSign;
 

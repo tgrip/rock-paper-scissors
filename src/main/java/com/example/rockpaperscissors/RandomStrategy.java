@@ -3,7 +3,7 @@ package com.example.rockpaperscissors;
 import java.util.EnumSet;
 import java.util.Random;
 
-public class RandomStrategy implements PlayStrategy {
+public class RandomStrategy implements PlayerStrategy {
 
     private final Random random;
     private final EnumSet<HandSign> handSigns;

@@ -5,7 +5,7 @@ import spock.lang.Specification
 class GameStatsTest extends Specification {
 
     def gameStats = new GameStats()
-    def player = new Player(Mock(PlayStrategy))
+    def player = new Player(Mock(PlayerStrategy))
 
     def "game stats displays stats for user"() {
         given:
