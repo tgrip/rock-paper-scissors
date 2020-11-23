@@ -28,7 +28,7 @@ public class RockPaperScissorGame {
 
     private void printResult(GameStats gameStats) {
         log.info("Game finished");
-        log.info(String.format("Results after playing %d rounds %n", nrRounds));
+        log.info(String.format("Results after playing %d rounds", nrRounds));
         log.info("Player 1");
         log.info(gameStats.status(player1));
         log.info("Player 2");
