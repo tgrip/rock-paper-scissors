@@ -5,15 +5,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class PlayerStats {
+class PlayerStats {
 
     private final Map<GameResult, Integer> stats;
 
-    public PlayerStats() {
+    PlayerStats() {
         stats = new HashMap<>();
     }
 
-    public String status() {
+    String status() {
         return EnumSet.allOf(GameResult.class).stream()
                 .map(this::getResultStat)
                 .map(Object::toString)
@@ -25,7 +25,7 @@ public class PlayerStats {
         return new ResultStat(gameResult, count);
     }
 
-    public void addResult(GameResult gameResult) {
+    void addResult(GameResult gameResult) {
         stats.merge(gameResult, 1, Integer::sum);
     }
 
