@@ -1,5 +1,6 @@
-package com.example.rockpaperscissors;
+package com.example.rockpaperscissors.conf;
 
+import com.example.rockpaperscissors.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
