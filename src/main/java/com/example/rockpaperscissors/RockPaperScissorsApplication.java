@@ -17,7 +17,7 @@ public class RockPaperScissorsApplication {
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
             RockPaperScissorGame game = ctx.getBean(RockPaperScissorGame.class);
-//            System.out.println("game = " + game);
+            game.playGame();
         };
     }
 }
