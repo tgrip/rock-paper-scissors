@@ -21,7 +21,7 @@ public class GameStats {
         if (stats == null) {
             return "Unknown player";
         } else {
-            return "Player (" + stats.status() + ")";
+            return "(" + stats.status() + ")";
         }
     }
 }

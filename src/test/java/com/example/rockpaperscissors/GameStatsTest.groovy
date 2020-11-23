@@ -15,7 +15,7 @@ class GameStatsTest extends Specification {
         def status = gameStats.status(player)
 
         then:
-        status == "Player (0 Wins, 1 Draws, 0 Losses)"
+        status == "(0 Wins, 1 Draws, 0 Losses)"
     }
 
     def "display player unknown"() {
