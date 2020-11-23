@@ -1,6 +1,11 @@
 package com.example.rockpaperscissors;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 public class RockPaperScissorGame {
+
+    private final static Log log = LogFactory.getLog(RockPaperScissorGame.class);
 
     private final Player player1;
     private final Player player2;
@@ -13,20 +18,21 @@ public class RockPaperScissorGame {
     }
 
     public void playGame() {
+        log.info("Starting game");
         GameStats gameStats = new GameStats();
-        for(int i = 0; i < nrRounds; i++) {
+        for (int i = 0; i < nrRounds; i++) {
             playRound(gameStats);
         }
         printResult(gameStats);
     }
 
     private void printResult(GameStats gameStats) {
-        System.out.println("Game finished");
-        System.out.printf("Results after %d rounds %n", nrRounds);
-        System.out.println("Player 1");
-        System.out.println(gameStats.status(player1));
-        System.out.println("Player 2");
-        System.out.println(gameStats.status(player2));
+        log.info("Game finished");
+        log.info(String.format("Results after playing %d rounds %n", nrRounds));
+        log.info("Player 1");
+        log.info(gameStats.status(player1));
+        log.info("Player 2");
+        log.info(gameStats.status(player2));
     }
 
     private void playRound(GameStats gameStats) {
