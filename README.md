@@ -9,3 +9,6 @@ Configure your JAVA_HOME environment variable to the directory where JDK 15 is i
 
 ## Run
 As with every Spring Boot application, it can be runned in the terminal using the following command *./mvnw spring-boot:run*
+
+## Run tests
+Tests can be run similarly with *./mvnw test*, and the application can be packaged with *./mvnw package*
